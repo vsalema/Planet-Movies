@@ -14,6 +14,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="css/bootstrap-video-carousel.min.css" />
+<script>
+    window.addEventListener('message', (event) => {
+        if (event.data.type === 'SEOStructuredData') {
+            const { SEOStructuredData } = event.data;
+            const script = document.createElement('script');
+            script.setAttribute('type', 'application/ld+json');
+            script.textContent = JSON.stringify(SEOStructuredData);
+            document.head.appendChild(script);
+        }
+    });
+</script>
+
 </head>
 
 <body>
